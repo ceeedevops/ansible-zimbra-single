@@ -18,22 +18,8 @@ python3 -m pip install netaddr
 ## Clone The Repository
 
 ```
-git clone
+git clone https://github.com/ceeedevops/ansible-zimbra-single.git
 ```
-
-
-
-## Role Variables
-
-Change the following roles variables to suit your needs. 
-
-```
-zimbra_timezone: Asia/Colombo
-zimbra_fqdn: mail.c-eee.org
-zimbra_admin_password: ChangeMe@1
-```
-
-
 
 ##  Example Playbook
 
@@ -55,6 +41,15 @@ vi site.yml
     zimbra_admin_password: ChangeMe@1
   roles:
     - ansible-zimbra-single
+```
+
+> [!IMPORTANT]
+> Change the following roles variables to suit your needs in your play book
+
+```
+zimbra_timezone: Asia/Colombo
+zimbra_fqdn: mail.c-eee.org
+zimbra_admin_password: ChangeMe@1
 ```
 
 Then run as follows:
