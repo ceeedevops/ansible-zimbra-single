@@ -28,20 +28,25 @@ zimbra_admin_password: ChangeMe@1
 
 ##  Example Playbook
 
-![NOTE]: ANSIBLE MANAGED NODE TESTED TO RUN AS ROOT ONLY!
+> [!IMPORTANT] 
+> Ansible managed node tested to run as `root` user only!
 
-Create playbook similar below:
+Create playbook similar to  below:
 
-    # vi site.yml
+```bssh
+vi site.yml
+```
 
-    --- 
-    - hosts: zimbra
-      vars:
-        zimbra_timezone: Asia/Singapore
-        zimbra_fqdn: mail.example.com
-        zimbra_admin_password: zimbra4ever
-      roles:
-        - ansible-zimbra-single
+```yaml
+--- 
+- hosts: zimbra
+  vars:
+    zimbra_timezone: Asia/Colombo
+    zimbra_fqdn: mail.c-eee.org
+    zimbra_admin_password: ChangeMe@1
+  roles:
+    - ansible-zimbra-single
+```
 
 Then run as follows:
 
