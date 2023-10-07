@@ -1,31 +1,34 @@
 ## Installing Zimbra on a Single Server Using Ansible
 
-The role `ansible-zimbra-single` automates the installation of single-server Zimbra Open Source Edition `v8.8.15` and `v9.0.0` on `CentOS 7`, `CentOS 8`, Rocky Linux `8`, Ubuntu `18.04`, and Ubuntu `20.04`.
+The role `ansible-zimbra-single` automates the installation of single-server Zimbra Open Source Edition `v8.8.15` and `v9.0.0` on `CentOS 7`, CentOS `8`, Rocky Linux `8`, Ubuntu `18.04`, and Ubuntu `20.04`.
 
-Requirements
-------------
+## Installation Prerequisites
 
-1) Must be a fresh CentOS 7, CentOS 8, Rocky Linux 8, Ubuntu 18.04, or Ubuntu 20.04 minimal installation.
-2) Static network configuration must be already set.
-3) Ansible control node must have the "netaddr" Python module installed.
+1. Must be a fresh CentOS `7`, CentOS `8`, Rocky Linux `8`, Ubuntu `18.04`, or Ubuntu `20.04` minimal installation.
+2. Static network configuration must be already set.
+3. Ansible control node must have the `netaddr` Python module installed.
 
-Installing Ansible and "netaddr" module using PIP
--------------------------------------------------
+Installing Ansible and  `netaddr` module using `pip`
 
-    # python3 -m pip install ansible
-    # python3 -m pip install netaddr
+```
+apt install python3-pip
+python3 -m pip install ansible
+python3 -m pip install netaddr
+```
 
-Role Variables
---------------
+## Role Variables
 
-    zimbra_timezone: Asia/Singapore
-    zimbra_fqdn: mail.example.com
-    zimbra_admin_password: zimbra4ever
+Change the following roles variables to suit your needs. 
 
-Example Playbook
-----------------
+```
+zimbra_timezone: Asia/Colombo
+zimbra_fqdn: mail.c-eee.org
+zimbra_admin_password: ChangeMe@1
+```
 
-NOTE: ANSIBLE MANAGED NODE TESTED TO RUN AS ROOT ONLY!
+##  Example Playbook
+
+![NOTE]: ANSIBLE MANAGED NODE TESTED TO RUN AS ROOT ONLY!
 
 Create playbook similar below:
 
