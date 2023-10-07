@@ -15,6 +15,13 @@ apt install python3-pip
 python3 -m pip install ansible
 python3 -m pip install netaddr
 ```
+## Clone The Repository
+
+```
+git clone
+```
+
+
 
 ## Role Variables
 
@@ -25,6 +32,8 @@ zimbra_timezone: Asia/Colombo
 zimbra_fqdn: mail.c-eee.org
 zimbra_admin_password: ChangeMe@1
 ```
+
+
 
 ##  Example Playbook
 
