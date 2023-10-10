@@ -11,9 +11,9 @@ The role `ansible-zimbra-single` automates the installation of single-server Zim
 Installing Ansible and  `netaddr` module using `pip`
 
 ```
-apt install python3-pip
-python3 -m pip install ansible
-python3 -m pip install netaddr
+sudo apt install python3-pip
+sudo python3 -m pip install ansible
+sudo python3 -m pip install netaddr
 ```
 ## Clone The Repository
 
