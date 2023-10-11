@@ -66,13 +66,13 @@ sudo nano ansible-zimbra-single/hosts
 - Then run as follows:
 
 ```bash
-ansible-playbook site.yml --tags install
+ansible-playbook -i ansible-zimbra-single/hosts site.yml --tags install
 ```
 
 - If you want to setup Zimbra 9 instead:
 
 ```bash
-ansible-playbook site.yml --tags zimbra9
+ansible-playbook -i ansible-zimbra-single/hosts site.yml --tags zimbra9
 ```
 
 ## Other Features
