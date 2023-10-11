@@ -65,11 +65,16 @@ sudo nano ansible-zimbra-single/hosts
 
 - Then run as follows:
 
-    # ansible-playbook site.yml --tags install
+```bash
+ansible-playbook site.yml --tags install
+```
 
-If you want to setup Zimbra 9 instead:
+- If you want to setup Zimbra 9 instead:
 
-    # ansible-playbook site.yml --tags zimbra9
+```bash
+ansible-playbook site.yml --tags zimbra9
+```
+
 ## Other Features
 
 The job also installs Fail2Ban, which is preconfigured with jails and filters. They can be found in the /etc/fail2ban directory.
@@ -78,6 +83,7 @@ The job also installs Fail2Ban, which is preconfigured with jails and filters. T
 fail2ban-client status
 ```
 - Output:
+
 ```bash
 Status
   |- Number of jail:	4
@@ -85,7 +91,6 @@ Status
 ```
 
 ## License
-
 
 MIT License
 
