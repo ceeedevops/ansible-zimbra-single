@@ -165,12 +165,12 @@
 
 - name: download zimbra installer
   get_url:
-    url: https://download.zextras.com/zcs-9.0.0_OSE_UBUNTU20_latest-zextras.tgz 
+    url: https://gitlab.com/c-eee.org/zimbra_c-eee/-/raw/main/9/p33/UBUNTU20_64-KEPLER-900-20231010174750-FOSS-0033/zcs-9.0.0_GA_0033.UBUNTU20_64.20231010174750.tgz?ref_type=heads 
     dest: /root
 
 - name: extract zimbra installer
   unarchive:
-    src: /root/zcs-9.0.0_OSE_UBUNTU20_latest-zextras.tgz
+    src: /root/zcs-9.0.0_GA_0033.UBUNTU20_64.20231010174750.tgz
     dest: /root
     remote_src: yes
 
@@ -207,7 +207,7 @@
 - name: run zimbra installer phase 1
   shell: ./install.sh -s < /tmp/zimbra_answers.txt
   args:
-    chdir: /root/zcs-9.0.0_ZEXTRAS_20220402.UBUNTU20_64.20220419075932/ 
+    chdir: /root/zcs-9.0.0_GA_0033.UBUNTU20_64.20231010174750/
 
 - name: run zimbra installer phase 2
   command: /opt/zimbra/libexec/zmsetup.pl -c /tmp/zimbra_config.txt
