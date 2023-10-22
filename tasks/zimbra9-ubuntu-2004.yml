@@ -10,6 +10,8 @@
       - wget
       - lsof
       - rsync
+      - net-tool
+      - git
     state: present
     update_cache: yes
 
